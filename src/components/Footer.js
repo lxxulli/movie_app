@@ -1,3 +1,3 @@
-export const footer = () => {
+export const Footer = () => {
   return <>footer</>;
 };
