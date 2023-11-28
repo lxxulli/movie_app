@@ -13,3 +13,5 @@
 - [x] font-awesome
   - npm i font-awesome
 - [x] swiper
+- [x] spinner
+  - npm i react-spinners
