@@ -6,6 +6,10 @@ export const mainColors = {
   pointColor: "#ff3090",
 };
 
+export const maintext = {
+  pointText: "'Black Han Sans', sans-serif",
+};
+
 export const GlobalStyled = createGlobalStyle`
  ${reset}
 
@@ -25,7 +29,7 @@ export const GlobalStyled = createGlobalStyle`
  }
 
  a{
-    text-decoration: none;
-    color: "white";
+   text-decoration: none;
+   color: white;
  }
 `;
