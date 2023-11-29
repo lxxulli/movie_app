@@ -13,6 +13,7 @@
 - [x] font-awesome
   - npm i font-awesome
 - [x] swiper
+  - npm install swiper
 - [x] spinner
   - npm i react-spinners
 - [x] fetch

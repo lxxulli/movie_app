@@ -14,10 +14,13 @@ const SHeader = styled.div`
   position: fixed;
   z-index: 10;
 `;
-const LOGO = styled.div`
+const LOGO = styled.h1`
   font-size: 40px;
   font-family: ${maintext.pointText};
   letter-spacing: 0;
+  a {
+    color: #00c896;
+  }
 `;
 const Menu = styled.div`
   display: flex;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../contents";
 import { Banner } from "./Banner";
+import { MovieType } from "./MovieType";
 
 const MainBanner = styled.div`
   padding: 200px 5%;
@@ -40,6 +41,7 @@ const BlackBg = styled.div`
 
 export const Home = () => {
   const [nowData, setNowData] = useState();
+  const [popData, setPopData] = useState();
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -47,7 +49,8 @@ export const Home = () => {
       try {
         const { results: nowData } = await nowPlaying();
         setNowData(nowData);
-
+        const { results: popData } = await popular();
+        setPopData(popData);
         setIsLoading(false);
       } catch (error) {
         console.log("error : " + error);
@@ -55,7 +58,7 @@ export const Home = () => {
     })();
   }, []);
 
-  // console.log(nowData);
+  console.log(popData);
 
   return (
     <>
@@ -66,6 +69,7 @@ export const Home = () => {
           {nowData && (
             <>
               <Banner data={nowData[0]} />
+              <MovieType TitleName="인기 영화" data={popData} />
             </>
           )}
         </div>
