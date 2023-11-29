@@ -6,10 +6,13 @@ import { faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 import { maintext } from "../pages/style/GlobalStyled";
 
 const SHeader = styled.div`
+  width: 100%;
   padding: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 10;
 `;
 const LOGO = styled.div`
   font-size: 40px;

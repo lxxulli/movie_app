@@ -1,16 +1,42 @@
 import { useEffect, useState } from "react";
-import { nowPlaying } from "../../api";
+import { nowPlaying, popular } from "../../api";
 import styled from "styled-components";
 import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../contents";
+import { Banner } from "./Banner";
 
 const MainBanner = styled.div`
-  padding: 10% 5%;
+  padding: 200px 5%;
   height: 80vh;
   background: url(${IMG_URL}/original/${(props) => props.$bgUrl}) no-repeat
     center / cover;
+  position: relative;
+  h3,
+  p {
+    max-width: 700px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  p {
+    line-height: 20px;
+  }
 `;
-const BlackBg = styled.div``;
+const BlackBg = styled.div`
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.821522309711286) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
 
 export const Home = () => {
   const [nowData, setNowData] = useState();
@@ -21,6 +47,7 @@ export const Home = () => {
       try {
         const { results: nowData } = await nowPlaying();
         setNowData(nowData);
+
         setIsLoading(false);
       } catch (error) {
         console.log("error : " + error);
@@ -28,7 +55,7 @@ export const Home = () => {
     })();
   }, []);
 
-  console.log(nowData);
+  // console.log(nowData);
 
   return (
     <>
@@ -38,11 +65,7 @@ export const Home = () => {
         <div>
           {nowData && (
             <>
-              <MainBanner>
-                <BlackBg $bgUrl={nowData[0].backdrop_path} />
-                <h3>{nowData[0].title}</h3>
-                <p>{nowData[0].overview}</p>
-              </MainBanner>
+              <Banner data={nowData[0]} />
             </>
           )}
         </div>
