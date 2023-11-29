@@ -1,4 +1,4 @@
-// const fetch = require("node-fetch");
+const fetch = require("node-fetch");
 
 const baseurl = "https://api.themoviedb.org/3/";
 const nowPlayingUrl = baseurl + "movie/now_playing?language=ko-KR";

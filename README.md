@@ -15,3 +15,5 @@
 - [x] swiper
 - [x] spinner
   - npm i react-spinners
+- [x] fetch
+  - npm i node-fetch
