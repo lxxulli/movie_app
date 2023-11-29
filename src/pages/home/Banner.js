@@ -3,7 +3,7 @@ import { IMG_URL } from "../../contents";
 
 const MainBanner = styled.div`
   padding: 200px 5%;
-  height: 80vh;
+  height: 85vh;
   background: url(${IMG_URL}/original/${(props) => props.$bgUrl}) no-repeat
     center / cover;
   position: relative;
@@ -20,6 +20,7 @@ const MainBanner = styled.div`
   }
   p {
     line-height: 20px;
+    font-size: 18px;
   }
 `;
 const BlackBg = styled.div`
