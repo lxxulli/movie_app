@@ -26,6 +26,7 @@ const MainBanner = styled.div`
 const BlackBg = styled.div`
   width: 100%;
   height: 100%;
+  // eslint-disable-next-line
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.9005235602094241) 0%,

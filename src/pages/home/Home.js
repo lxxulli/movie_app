@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { nowPlaying, popular } from "../../api";
+import { nowPlaying, popular, topRated } from "../../api";
 import styled from "styled-components";
 import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../contents";
@@ -42,6 +42,7 @@ const BlackBg = styled.div`
 export const Home = () => {
   const [nowData, setNowData] = useState();
   const [popData, setPopData] = useState();
+  const [topData, setTopData] = useState();
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -51,6 +52,8 @@ export const Home = () => {
         setNowData(nowData);
         const { results: popData } = await popular();
         setPopData(popData);
+        const { results: topData } = await topRated();
+        setTopData(topData);
         setIsLoading(false);
       } catch (error) {
         console.log("error : " + error);
@@ -58,7 +61,7 @@ export const Home = () => {
     })();
   }, []);
 
-  console.log(popData);
+  console.log(topData);
 
   return (
     <>
@@ -69,7 +72,8 @@ export const Home = () => {
           {nowData && (
             <>
               <Banner data={nowData[0]} />
-              <MovieType TitleName="인기 영화" data={popData} />
+              <MovieType titleName="인기 영화" data={popData} />
+              <MovieType titleName="현재 상영 영화" data={nowData} />
             </>
           )}
         </div>

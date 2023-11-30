@@ -15,7 +15,6 @@ const SFooter = styled.div`
 const Instar = styled.div`
   width: 70px;
   height: 70px;
-  padding: ;
   border: 2px solid white;
   border-radius: 50%;
   display: flex;

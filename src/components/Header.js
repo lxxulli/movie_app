@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { routes } from "../routes";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faRightToBracket,
+} from "@fortawesome/free-solid-svg-icons";
 import { maintext } from "../pages/style/GlobalStyled";
 
 const SHeader = styled.div`
@@ -43,8 +46,8 @@ export const Header = () => {
           </Link>
         </li>
         <li>
-          <Link to={routes.search}>
-            <FontAwesomeIcon icon={faUser} />
+          <Link to={routes.login}>
+            <FontAwesomeIcon icon={faRightToBracket} />
           </Link>
         </li>
       </Menu>

@@ -13,43 +13,43 @@ const Title = styled.h3`
   margin-bottom: 30px;
 `;
 const MovieBg = styled.div`
-  height: 300px;
+  height: 400px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
 `;
 
 const setting = {
   spaceBetween: 20,
-  slidesPerView: 5.5,
+  slidesPerView: 6.5,
 
   breakpoints: {
     1024: {
       spaceBetween: 20,
-      slidesPerView: 5.5,
+      slidesPerView: 6.5,
     },
-    640: {
+    768: {
       spaceBetween: 15,
-      slidesPerView: 4.3,
+      slidesPerView: 4.5,
     },
     320: {
       spaceBetween: 10,
-      slidesPerView: 3.2,
+      slidesPerView: 3.5,
     },
   },
 };
 
-export const MovieType = ({ data, TitleName }) => {
+export const MovieType = ({ data, titleName }) => {
   return (
     <Containal>
-      <Title>{TitleName}</Title>
+      <Title>{titleName}</Title>
       <Swiper {...setting}>
-        {data.map((movie) => {
+        {data.map((movie) => (
           <SwiperSlide key={movie.id}>
             <Link to={`/detail/${movie.id}`}>
-              <MovieBg $bgUrl={movie.backprop_path} />
+              <MovieBg $bgUrl={movie.poster_path} />
             </Link>
-          </SwiperSlide>;
-        })}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Containal>
   );
