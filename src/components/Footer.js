@@ -8,6 +8,7 @@ const SFooter = styled.div`
   padding: 100px 2%;
   text-align: center;
   border-top: 1px solid white;
+  margin-top: 50px;
   h4 {
     font-size: 18px;
   }

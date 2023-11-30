@@ -3,7 +3,7 @@ import { IMG_URL } from "../../contents";
 
 const MainBanner = styled.div`
   padding: 200px 5%;
-  height: 85vh;
+  height: 80vh;
   background: url(${IMG_URL}/original/${(props) => props.$bgUrl}) no-repeat
     center / cover;
   position: relative;
@@ -12,6 +12,8 @@ const MainBanner = styled.div`
     max-width: 700px;
     width: 100%;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
   h3 {
     font-size: 60px;
@@ -19,7 +21,7 @@ const MainBanner = styled.div`
     margin-bottom: 25px;
   }
   p {
-    line-height: 20px;
+    line-height: 25px;
     font-size: 18px;
   }
 `;
@@ -29,7 +31,7 @@ const BlackBg = styled.div`
   // eslint-disable-next-line
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.9005235602094241) 0%,
+    rgba(27, 27, 27, 1) 0%,
     rgba(255, 255, 255, 0) 70%
   );
   position: absolute;

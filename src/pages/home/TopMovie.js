@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Containal, Title, MovieBigBg, ConWrap, Num } from "./Css";
 
 const setting = {
-  spaceBetween: 20,
+  spaceBetween: 90,
   slidesPerView: 4.5,
 
   breakpoints: {
@@ -26,18 +26,18 @@ export const TopMovie = ({ titleName, data }) => {
   return (
     <Containal>
       <Title>{titleName}</Title>
-      <ConWrap>
-        <Swiper {...setting}>
-          {data.map((movie, index) => (
-            <SwiperSlide key={movie.id}>
+      <Swiper {...setting}>
+        {data.map((movie, index) => (
+          <SwiperSlide key={movie.id}>
+            <ConWrap>
               <Link to={`/detail/${movie.id}`}>
                 <Num>{index + 1}</Num>
                 <MovieBigBg $bgUrl={movie.poster_path} />
               </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </ConWrap>
+            </ConWrap>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Containal>
   );
 };

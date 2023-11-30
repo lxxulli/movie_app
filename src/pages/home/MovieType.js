@@ -5,7 +5,7 @@ import "swiper/css";
 import { Containal, Title, MovieBg } from "./Css";
 
 const setting = {
-  spaceBetween: 20,
+  spaceBetween: 15,
   slidesPerView: 6.5,
 
   breakpoints: {
