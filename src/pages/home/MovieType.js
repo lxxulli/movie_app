@@ -2,21 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { IMG_URL } from "../../contents";
-
-const Containal = styled.section`
-  padding: 50px 2%;
-`;
-const Title = styled.h3`
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 30px;
-`;
-const MovieBg = styled.div`
-  height: 400px;
-  background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
-    cover;
-`;
+import { Containal, Title, MovieBg } from "./Css";
 
 const setting = {
   spaceBetween: 20,

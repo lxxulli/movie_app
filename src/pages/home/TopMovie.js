@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Containal, Title, MovieBg } from "./Css";
 
 export const TopMovie = ({ titleName }) => {
   return (
