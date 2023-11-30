@@ -5,6 +5,7 @@ import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../contents";
 import { Banner } from "./Banner";
 import { MovieType } from "./MovieType";
+import { TopMovie } from "./TopMovie";
 
 const MainBanner = styled.div`
   padding: 200px 5%;
@@ -61,7 +62,7 @@ export const Home = () => {
     })();
   }, []);
 
-  console.log(topData);
+  // console.log(topData);
 
   return (
     <>
@@ -74,6 +75,7 @@ export const Home = () => {
               <Banner data={nowData[0]} />
               <MovieType titleName="인기 영화" data={popData} />
               <MovieType titleName="현재 상영 영화" data={nowData} />
+              <TopMovie titleName="TOP 20 영화" data={topData} />
             </>
           )}
         </div>

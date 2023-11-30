@@ -6,7 +6,7 @@ import {
   faMagnifyingGlass,
   faRightToBracket,
 } from "@fortawesome/free-solid-svg-icons";
-import { maintext } from "../pages/style/GlobalStyled";
+import { mainText } from "../pages/style/GlobalStyled";
 
 const SHeader = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ const SHeader = styled.div`
 `;
 const LOGO = styled.h1`
   font-size: 40px;
-  font-family: ${maintext.pointText};
+  font-family: ${mainText.pointText};
   letter-spacing: 0;
   a {
     color: #00c896;

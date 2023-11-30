@@ -3,10 +3,10 @@ import reset from "styled-reset";
 
 export const mainColors = {
   blackColor: "#1b1b1b",
-  pointColor: "#ff3090",
+  pointColor: "#00c896",
 };
 
-export const maintext = {
+export const mainText = {
   pointText: "'Black Han Sans', sans-serif",
 };
 
