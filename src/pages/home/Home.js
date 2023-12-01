@@ -6,6 +6,7 @@ import { IMG_URL } from "../../contents";
 import { Banner } from "./Banner";
 import { MovieType } from "./MovieType";
 import { TopMovie } from "./TopMovie";
+import { PageTitle } from "../../components/PageTitle";
 
 const MainBanner = styled.div`
   padding: 200px 5%;
@@ -75,6 +76,7 @@ export const Home = () => {
         <div>
           {nowData && (
             <>
+              <PageTitle titleName="HOME" />
               <Banner data={nowData[0]} />
               <MovieType titleName="인기 영화" data={popData} />
               <MovieType titleName="현재 상영 영화" data={nowData} />

@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import { PageTitle } from "../../components/PageTitle";
 
 const Wrap = styled.div`
   padding: 100px 2%;
@@ -16,6 +17,8 @@ export const Search = () => {
 
   return (
     <Wrap>
+      <PageTitle titleName="SEARCH" />
+
       <Form>
         <Input />
       </Form>
