@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { Loading } from "../../components/Loading";
+import { movieDatail } from "../../api";
+import { PageTitle } from "../../components/PageTitle";
 
-const Wrap = styled.div``;
+const Wrap = styled.div`
+  padding: 100px 2%;
+`;
 const MainImg = styled.div``;
 const ConWrap = styled.div``;
 const Title = styled.div``;
@@ -17,17 +21,20 @@ const Desc = styled.div``;
 export const Detail = () => {
   const { id } = useParams();
 
-  const [isloading, setIsLoading] = useState(true);
+  const [detailData, setDetailData] = useState();
+  const [isloading, setLoading] = useState(true);
 
   useEffect(() => {
-    (() => {
+    (async () => {
       try {
-        setIsLoading(false);
+        const data = await movieDatail(id);
+        setDetailData(data);
+        setLoading(false);
       } catch (error) {
-        console.log("error : " + error);
+        console.log("Error :" + error);
       }
     })();
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -35,18 +42,25 @@ export const Detail = () => {
         <Loading />
       ) : (
         <Wrap>
-          <MainImg />
+          <PageTitle titleName="detail" />
+          <MainImg $bgUrl={detailData.poster_path} />
           <ConWrap>
-            <Title></Title>
+            <Title>{detailData.title}</Title>
             <Con>
-              <VoteAverage></VoteAverage>
-              <li>|</li>
-              <Runtime></Runtime>
-              <li>|</li>
-              <ReleaseData></ReleaseData>
+              <VoteAverage>
+                평점 <span>{Math.round(detailData.vote_average)}점</span>
+              </VoteAverage>
+              <li>•</li>
+              <Runtime>{detailData.runtime}분</Runtime>
+              <li>•</li>
+              <ReleaseData>{detailData.release_date}</ReleaseData>
             </Con>
-            <Genres></Genres>
-            <Desc></Desc>
+            <Genres>
+              {detailData.genres.map((genre) => (
+                <li key={genre.id}>{genre.name}</li>
+              ))}
+            </Genres>
+            <Desc>{detailData.overview}</Desc>
           </ConWrap>
         </Wrap>
       )}

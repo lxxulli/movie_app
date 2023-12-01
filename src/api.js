@@ -26,3 +26,7 @@ export const upcoming = () =>
   fetch(upcomingUrl, options).then((res) => res.json());
 export const movieList = () =>
   fetch(movieListUrl, options).then((res) => res.json());
+export const movieDatail = (id) => {
+  const detailUrl = baseurl + `movie/${id}?language=ko-kr`;
+  return fetch(detailUrl, options).then((res) => res.json());
+};

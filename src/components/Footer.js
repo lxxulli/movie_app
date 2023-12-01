@@ -13,27 +13,11 @@ const SFooter = styled.div`
     font-size: 18px;
   }
 `;
-const Instar = styled.div`
-  width: 70px;
-  height: 70px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto 0;
-  font-size: 30px;
-`;
 
 export const Footer = () => {
   return (
     <SFooter>
       <h4>Copyright 2023 MWUP &copy; All right reserved.</h4>
-      <Link to={INSTAR_URL}>
-        <Instar>
-          <FontAwesomeIcon icon={faInstagram} />
-        </Instar>
-      </Link>
     </SFooter>
   );
 };

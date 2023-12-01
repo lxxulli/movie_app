@@ -22,7 +22,7 @@ export const ConWrap = styled.section`
   left: 65px;
 `;
 export const MovieBigBg = styled.div`
-  height: 410px;
+  height: 420px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
 `;

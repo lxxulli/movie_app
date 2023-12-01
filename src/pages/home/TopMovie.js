@@ -8,7 +8,7 @@ const setting = {
 
   breakpoints: {
     1024: {
-      spaceBetween: 20,
+      spaceBetween: 80,
       slidesPerView: 4.5,
     },
     768: {

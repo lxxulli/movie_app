@@ -1,3 +1,9 @@
+import styled from "styled-components";
+
+const Wrap = styled.div`
+  padding: 100px;
+`;
+
 export const PageNotFound = () => {
-  return <>404</>;
+  return <Wrap>404</Wrap>;
 };
