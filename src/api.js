@@ -24,3 +24,5 @@ export const topRated = () =>
   fetch(topRatedUrl, options).then((res) => res.json());
 export const upcoming = () =>
   fetch(upcomingUrl, options).then((res) => res.json());
+export const movieList = () =>
+  fetch(movieListUrl, options).then((res) => res.json());
