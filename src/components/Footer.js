@@ -1,8 +1,4 @@
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { INSTAR_URL } from "../contents";
 
 const SFooter = styled.div`
   padding: 100px 2%;
