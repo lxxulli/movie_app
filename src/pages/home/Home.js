@@ -41,7 +41,7 @@ export const Home = () => {
         <div>
           {nowData && (
             <>
-              <PageTitle titleName="HOME" />
+              <PageTitle titleName="HOME" />ç
               <Banner data={nowData[0]} />
               <MovieType titleName="인기 영화" data={popData} />
               <MovieType titleName="현재 상영 영화" data={nowData} />
