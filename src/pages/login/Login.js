@@ -6,14 +6,24 @@ import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import { mainColors } from "../style/GlobalStyled";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "../../components/ErrorMessage";
+import { Link } from "react-router-dom";
 
 const Wrap = styled.div`
-  max-width: 600px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Form = styled.form`
+  max-width: 450px;
   width: 100%;
-  margin: 100px auto;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 `;
-const Form = styled.form``;
 const User = styled.ul`
   margin-bottom: 30px;
   font-size: 70px;
@@ -29,10 +39,8 @@ const User = styled.ul`
 `;
 const InputWrap = styled.div`
   background-color: #464646;
-  width: 270px;
-  height: 50px;
-  margin: 10px auto;
-  padding: 10px 20px;
+  margin-bottom: 10px;
+  padding: 0 15px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -47,7 +55,7 @@ const Icon = styled.div`
 const Input = styled.input`
   all: unset;
   width: 100%;
-  height: 100%;
+  height: 50px;
   padding: 0 10px;
   text-align: left;
 `;
@@ -66,8 +74,10 @@ const SignupButton = styled.button`
   height: 50px;
   border: 1px solid ${mainColors.pointColor};
   border-radius: 10px;
-  color: ${mainColors.pointColor};
   cursor: pointer;
+  a {
+    color: ${mainColors.pointColor};
+  }
 `;
 const Text = styled.div`
   display: flex;
@@ -143,7 +153,9 @@ export const Login = () => {
             <p>계정이 없으신가요?</p>
             <li></li>
           </Text>
-          <SignupButton>SIGN UP</SignupButton>
+          <SignupButton>
+            <Link to={`/signup`}>SIGN UP</Link>
+          </SignupButton>
         </Form>
       </Wrap>
     </>
