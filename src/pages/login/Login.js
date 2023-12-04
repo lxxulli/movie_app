@@ -96,9 +96,9 @@ export const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { error, isValid },
+    formState: { errors, isValid },
   } = useForm({
-    mode: "onChange",
+    mode: "onSubmit",
   });
 
   const loginHandler = () => {};
@@ -128,7 +128,7 @@ export const Login = () => {
               type="text"
               placeholder="ID"
             />
-            <ErrorMessage text={error?.username?.message} />
+            <ErrorMessage text={errors?.username?.message} />
           </InputWrap>
           <InputWrap>
             <Icon>
@@ -145,7 +145,7 @@ export const Login = () => {
               type="password"
               placeholder="PASSWORD"
             />
-            <ErrorMessage text={error?.password?.message} />
+            <ErrorMessage text={errors?.password?.message} />
           </InputWrap>
           <LoginButton $isActive={isValid}>LOGIN</LoginButton>
           <Text>

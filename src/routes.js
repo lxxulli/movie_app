@@ -1,6 +1,6 @@
 export const routes = {
   home: "/",
-  detail: "//datail",
+  detail: "/detail/:id",
   search: "/search",
   login: "/login",
   signup: "/signup",

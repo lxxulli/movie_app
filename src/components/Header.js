@@ -41,7 +41,7 @@ export const Header = () => {
       </LOGO>
       <Menu>
         <li>
-          <Link to={`routes.search`}>
+          <Link to={routes.search}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </Link>
         </li>
