@@ -5,6 +5,7 @@ import { Loading } from "../../components/Loading";
 import { Banner } from "./Banner";
 import { MovieType } from "./MovieType";
 import { TopMovie } from "./TopMovie";
+import { ScrollTop } from "../../lib/ScrollTop";
 
 export const Home = () => {
   const [nowData, setNowData] = useState();
@@ -12,6 +13,8 @@ export const Home = () => {
   const [topData, setTopData] = useState();
   const [uploadData, setUploadData] = useState();
   const [isloading, setIsLoading] = useState(true);
+
+  ScrollTop();
 
   useEffect(() => {
     (async () => {

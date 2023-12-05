@@ -148,15 +148,15 @@ export const Login = () => {
           </InputWrap>
           <ErrorMessage text={errors?.password?.message} />
           <LoginButton $isActive={isValid}>LOGIN</LoginButton>
-          <Text>
-            <li></li>
-            <p>계정이 없으신가요?</p>
-            <li></li>
-          </Text>
-          <SignupButton>
-            <Link to={`/signup`}>SIGN UP</Link>
-          </SignupButton>
         </Form>
+        <Text>
+          <li></li>
+          <p>계정이 없으신가요?</p>
+          <li></li>
+        </Text>
+        <SignupButton>
+          <Link to={`/signup`}>SIGN UP</Link>
+        </SignupButton>
       </Wrap>
     </>
   );
