@@ -13,16 +13,16 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
 `;
 const Form = styled.form`
   max-width: 450px;
   width: 100%;
-  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 `;
 const User = styled.ul`
   margin-bottom: 30px;
@@ -76,6 +76,10 @@ const SignupButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     color: ${mainColors.pointColor};
   }
 `;

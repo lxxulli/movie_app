@@ -6,6 +6,11 @@ import { Banner } from "./Banner";
 import { MovieType } from "./MovieType";
 import { TopMovie } from "./TopMovie";
 import { ScrollTop } from "../../lib/ScrollTop";
+import styled from "styled-components";
+
+const Layout = styled.div`
+  padding: 0 0 100px;
+`;
 
 export const Home = () => {
   const [nowData, setNowData] = useState();
@@ -46,10 +51,12 @@ export const Home = () => {
             <>
               <PageTitle titleName="HOME" />
               <Banner data={nowData[0]} />
-              <MovieType titleName="인기 영화" data={popData} />
-              <MovieType titleName="현재 상영 영화" data={nowData} />
-              <TopMovie titleName="TOP 20 영화" data={topData} />
-              <MovieType titleName="개봉 예정 영화" data={uploadData} />
+              <Layout>
+                <MovieType titleName="인기 영화" data={popData} />
+                <MovieType titleName="현재 상영 영화" data={nowData} />
+                <TopMovie titleName="TOP 20 영화" data={topData} />
+                <MovieType titleName="개봉 예정 영화" data={uploadData} />
+              </Layout>
             </>
           )}
         </div>
