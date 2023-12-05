@@ -2,18 +2,26 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { IMG_URL } from "../../contents";
 
 const Containal = styled.div``;
-const Title = styled.div``;
-const MovieBg = styled.div``;
+const Title = styled.div`
+  font-size: 25px;
+  margin: 20px 0;
+`;
+const MovieBg = styled.div`
+  height: 150px;
+  background: url(${IMG_URL}/w200/${(props) => props.$bgUrl}) no-repeat center /
+    cover;
+`;
 const setting = {
-  spaceBetween: 15,
-  slidesPerView: 6.5,
+  spaceBetween: 5,
+  slidesPerView: 5,
 
   breakpoints: {
     1024: {
-      spaceBetween: 20,
-      slidesPerView: 6.5,
+      spaceBetween: 10,
+      slidesPerView: 5,
     },
     768: {
       spaceBetween: 15,
@@ -27,7 +35,6 @@ const setting = {
 };
 
 export const SimalarMovie = ({ data, titlename }) => {
-  console.log(data);
   return (
     <Containal>
       <Title>{titlename}</Title>

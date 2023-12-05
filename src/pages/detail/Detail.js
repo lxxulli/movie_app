@@ -11,9 +11,7 @@ import { routes } from "../../routes";
 import { SimalarMovie } from "./SimilarMovie";
 
 const Wrap = styled.section`
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
@@ -22,6 +20,7 @@ const Containal = styled.div`
   width: 100%;
   background-color: #464646;
   border-radius: 15px;
+  margin-top: 50px;
 `;
 const CloseBtn = styled.button`
   all: unset;
@@ -110,8 +109,7 @@ export const Detail = () => {
       try {
         const data = await movieDatail(id);
         setDetailData(data);
-        const { result: similarData } = await movieSimilar(id);
-        console.log(similarData);
+        const { results: similarData } = await movieSimilar(id);
         setSimilarData(similarData);
         setLoading(false);
       } catch (error) {
@@ -153,8 +151,8 @@ export const Detail = () => {
                   <li key={genre.id}>{genre.name}</li>
                 ))}
               </Genres>
-              <Desc>{detailData.overview}</Desc>
-              {/* <SimalarMovie titlename="비슷한 영화" data={similarData} /> */}
+              <Desc>{detailData.overview.slice(0, 150) + ".."}</Desc>
+              <SimalarMovie titlename="비슷한 영화" data={similarData} />
             </ConWrap>
           </Containal>
         </Wrap>
