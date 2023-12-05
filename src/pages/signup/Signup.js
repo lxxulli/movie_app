@@ -79,7 +79,7 @@ export const Signup = () => {
   const {
     register,
     handleSubmit,
-    formState: { error, isValid },
+    formState: { errors, isValid },
   } = useForm({
     mode: "onChange",
   });
@@ -110,8 +110,8 @@ export const Signup = () => {
                 type="text"
                 placeholder="NAME"
               />
-              <ErrorMessage text={error?.name?.message} />
             </InputWrap>
+            <ErrorMessage text={errors?.name?.message} />
           </Con>
           <Con>
             <h4>아이디</h4>
@@ -127,8 +127,8 @@ export const Signup = () => {
                 type="text"
                 placeholder="ID"
               />
-              <ErrorMessage text={error?.username?.message} />
             </InputWrap>
+            <ErrorMessage text={errors?.username?.message} />
           </Con>
           <Con>
             <h4>패스워드</h4>
@@ -144,15 +144,15 @@ export const Signup = () => {
                 type="password"
                 placeholder="PASSWORD"
               />
-              <ErrorMessage text={error?.password?.message} />
             </InputWrap>
+            <ErrorMessage text={errors?.password?.message} />
           </Con>
           <Con>
             <h4>이메일</h4>
             <InputWrap>
               <Input {...register("email")} type="text" placeholder="E-MAIL" />
-              <ErrorMessage text={error?.email?.message} />
             </InputWrap>
+            <ErrorMessage text={errors?.email?.message} />
           </Con>
           <Con>
             <h4>연락처</h4>
@@ -168,8 +168,8 @@ export const Signup = () => {
                 type="text"
                 placeholder="PHONE NUMBER"
               />
-              <ErrorMessage text={error?.phonenumber?.message} />
             </InputWrap>
+            <ErrorMessage text={errors?.phonenumber?.message} />
           </Con>
           <Line />
           <LoginButton $isActive={isValid}>가입하기</LoginButton>

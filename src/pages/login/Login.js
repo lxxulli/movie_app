@@ -128,8 +128,8 @@ export const Login = () => {
               type="text"
               placeholder="ID"
             />
-            <ErrorMessage text={errors?.username?.message} />
           </InputWrap>
+          <ErrorMessage text={errors?.username?.message} />
           <InputWrap>
             <Icon>
               <FontAwesomeIcon icon={faLock} />
@@ -145,8 +145,8 @@ export const Login = () => {
               type="password"
               placeholder="PASSWORD"
             />
-            <ErrorMessage text={errors?.password?.message} />
           </InputWrap>
+          <ErrorMessage text={errors?.password?.message} />
           <LoginButton $isActive={isValid}>LOGIN</LoginButton>
           <Text>
             <li></li>

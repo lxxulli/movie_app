@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { Loading } from "../../components/Loading";
-import { movieDatail, moviesimilar } from "../../api";
+import { movieDatail, movieSimilar } from "../../api";
 import { PageTitle } from "../../components/PageTitle";
 import { IMG_URL } from "../../contents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -110,7 +110,8 @@ export const Detail = () => {
       try {
         const data = await movieDatail(id);
         setDetailData(data);
-        const { result: similarData } = await moviesimilar(id);
+        const { result: similarData } = await movieSimilar(id);
+        console.log(similarData);
         setSimilarData(similarData);
         setLoading(false);
       } catch (error) {
@@ -153,7 +154,7 @@ export const Detail = () => {
                 ))}
               </Genres>
               <Desc>{detailData.overview}</Desc>
-              <SimalarMovie titlename="비슷한 영화" />
+              {/* <SimalarMovie titlename="비슷한 영화" data={similarData} /> */}
             </ConWrap>
           </Containal>
         </Wrap>

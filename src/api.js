@@ -26,7 +26,7 @@ export const upcoming = () =>
   fetch(upcomingUrl, options).then((res) => res.json());
 export const movieList = () =>
   fetch(movieListUrl, options).then((res) => res.json());
-export const moviesimilar = (id) => {
+export const movieSimilar = (id) => {
   const similarUrl = baseurl + `movie/${id}/similar?language=ko-kr`;
   return fetch(similarUrl, options).then((res) => res.json());
 };
