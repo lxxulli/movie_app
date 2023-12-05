@@ -24,12 +24,12 @@ const setting = {
       slidesPerView: 5,
     },
     768: {
-      spaceBetween: 15,
-      slidesPerView: 4.5,
+      spaceBetween: 10,
+      slidesPerView: 4,
     },
     320: {
-      spaceBetween: 10,
-      slidesPerView: 3.5,
+      spaceBetween: 5,
+      slidesPerView: 3,
     },
   },
 };

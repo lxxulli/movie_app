@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { routes } from "../../routes";
 import { SimalarMovie } from "./SimilarMovie";
+import { ScrollTop } from "../../lib/ScrollTop";
 
 const Wrap = styled.section`
   display: flex;
@@ -103,6 +104,8 @@ export const Detail = () => {
   const [detailData, setDetailData] = useState();
   const [similarData, setSimilarData] = useState();
   const [isloading, setLoading] = useState(true);
+
+  ScrollTop();
 
   useEffect(() => {
     (async () => {
