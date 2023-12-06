@@ -14,6 +14,9 @@ const SHeader = styled.div`
   align-items: center;
   position: fixed;
   z-index: 10;
+  @media screen and (max-width: 375px) {
+    padding: 5%;
+  }
 `;
 const LOGO = styled.h1`
   font-size: 40px;

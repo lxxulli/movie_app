@@ -14,6 +14,18 @@ const Wrap = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 100px 2%;
+  /* @media screen and (max-width: 1475px) {
+    height: 290px;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 180px;
+  } */
+  @media screen and (max-width: 375px) {
+    padding: 80px 5% 50px;
+  }
 `;
 const Form = styled.form`
   display: flex;
@@ -25,6 +37,18 @@ const Form = styled.form`
   border-radius: 50px;
   padding: 10px 30px;
   color: rgba(255, 255, 255, 0.5);
+  /* @media screen and (max-width: 1475px) {
+    height: 290px;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 180px;
+  } */
+  @media screen and (max-width: 375px) {
+    height: 50px;
+  }
 `;
 
 const SearchIcon = styled.div`
@@ -35,6 +59,18 @@ const Input = styled.input`
   width: 100%;
   font-size: 20px;
   margin-left: 30px;
+  /* @media screen and (max-width: 1475px) {
+    height: 290px;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 180px;
+  } */
+  @media screen and (max-width: 375px) {
+    font-size: 18px;
+  }
 `;
 
 export const Search = () => {
