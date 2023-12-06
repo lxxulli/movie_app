@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { mainText } from "../pages/style/GlobalStyled";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { useEffect, useRef } from "react";
 
 const SHeader = styled.div`
   width: 100%;
@@ -12,7 +13,7 @@ const SHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   z-index: 10;
   @media screen and (max-width: 375px) {
     padding: 5%;
@@ -44,8 +45,28 @@ const Menu = styled.div`
 `;
 
 export const Header = () => {
+  const headerRef = useRef();
+
+  const scrollHandler = () => {
+    const pageY = window.pageYOffset;
+
+    if (pageY > 100) {
+      headerRef.current.style.position = "fixed";
+      headerRef.current.style.backgroundColor = "rgba(0,0,0,0.5";
+      headerRef.current.style.backdropFilter = "blur(3px)";
+    } else {
+      headerRef.current.style.position = "absolute";
+      headerRef.current.style.backgroundColor = "transparent";
+      headerRef.current.style.backdropFilter = "blur(0px)";
+    }
+  };
+
+  useEffect(() => {
+    return window.addEventListener("scroll", scrollHandler);
+  });
+
   return (
-    <SHeader>
+    <SHeader ref={headerRef}>
       <LOGO>
         <Link to={routes.home}>MWUP</Link>
       </LOGO>
