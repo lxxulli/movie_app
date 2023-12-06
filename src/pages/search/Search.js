@@ -15,14 +15,14 @@ const Wrap = styled.div`
   flex-direction: column;
   padding: 100px 2%;
   @media screen and (max-width: 1024px) {
-    padding: 100px 2% 70px;
+    padding: 80px 2% 70px;
   }
-  /* 
+
   @media screen and (max-width: 768px) {
-    height: 180px;
-  } */
+    padding: 70px 2% 60px;
+  }
   @media screen and (max-width: 375px) {
-    padding: 80px 5% 50px;
+    padding: 60px 5% 50px;
   }
 `;
 const Form = styled.form`
