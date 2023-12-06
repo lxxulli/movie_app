@@ -18,7 +18,7 @@ const SFooter = styled.div`
 export const Footer = () => {
   return (
     <SFooter>
-      <h4>Copyright 2023 MWUP &copy; All right reserved.</h4>
+      <h4>&copy; 2023 MWUP All right reserved.</h4>
     </SFooter>
   );
 };

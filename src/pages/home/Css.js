@@ -66,6 +66,7 @@ export const Num = styled.h3`
   position: absolute;
   bottom: -30px;
   left: -50px;
+  text-shadow: 0 0 10px ${mainColors.pointColor};
   @media screen and (max-width: 1475px) {
     font-size: 180px;
     bottom: -35px;

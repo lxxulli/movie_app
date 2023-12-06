@@ -15,13 +15,20 @@ const Wrap = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 100px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 0 70px;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 70px 0 50px;
+  }
 `;
 const Containal = styled.div`
   max-width: 600px;
   width: 100%;
   background-color: #464646;
   border-radius: 15px;
-  margin-top: 50px;
 `;
 const CloseBtn = styled.button`
   all: unset;
@@ -91,6 +98,13 @@ const Genres = styled.ul`
     background-color: #555;
     margin-right: 10px;
     border-radius: 5px;
+  }
+  @media screen and (max-width: 375px) {
+    li {
+      margin-right: 5px;
+      padding: 5px 7px;
+    }
+    /* margin-right: 10px; */
   }
 `;
 const Desc = styled.p`
