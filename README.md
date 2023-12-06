@@ -43,4 +43,9 @@
 - [x] spinner
   - npm i react-spinners
 - [x] fetch
+
   - npm i node-fetch
+
+  23.12.06 최종 컨펌 수정사항
+
+-

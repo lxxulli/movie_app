@@ -4,7 +4,7 @@ import { IMG_URL } from "../../contents";
 export const Containal = styled.div``;
 export const Title = styled.h3`
   margin: 40px 0 20px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   @media screen and (max-width: 375px) {
     margin: 20px 0;
@@ -24,7 +24,7 @@ export const Con = styled.div`
   }
 `;
 export const MovieBg = styled.div`
-  height: 350px;
+  height: 360px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
   border-radius: 10px;
@@ -39,6 +39,6 @@ export const MovieBg = styled.div`
     height: 180px;
   }
   @media screen and (max-width: 375px) {
-    height: 120px;
+    height: 110px;
   }
 `;
