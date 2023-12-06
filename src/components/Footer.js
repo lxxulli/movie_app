@@ -7,6 +7,12 @@ const SFooter = styled.div`
   h4 {
     font-size: 18px;
   }
+  @media screen and (max-width: 375px) {
+    padding: 70px 2%;
+    h4 {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const Footer = () => {

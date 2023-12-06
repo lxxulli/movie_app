@@ -22,12 +22,21 @@ const LOGO = styled.h1`
   a {
     color: #00c896;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 30px;
+  }
 `;
 const Menu = styled.div`
   display: flex;
   font-size: 30px;
   li {
     margin-left: 50px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 20px;
+    li {
+      margin-left: 30px;
+    }
   }
 `;
 

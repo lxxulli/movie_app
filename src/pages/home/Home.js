@@ -10,6 +10,15 @@ import styled from "styled-components";
 
 const Layout = styled.div`
   padding: 0 0 100px;
+  @media screen and (max-width: 1024px) {
+    padding: 0 0 80px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 0 65px;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 0 0 50px;
+  }
 `;
 
 export const Home = () => {

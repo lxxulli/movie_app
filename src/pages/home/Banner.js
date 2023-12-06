@@ -24,6 +24,26 @@ const MainBanner = styled.div`
     line-height: 25px;
     font-size: 18px;
   }
+  @media screen and (max-width: 768px) {
+    h3,
+    p {
+      max-width: 560px;
+      width: 100%;
+    }
+    h3 {
+      font-size: 50px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h3 {
+      font-size: 35px;
+      margin-bottom: 35px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 `;
 const BlackBg = styled.div`
   width: 100%;

@@ -7,16 +7,20 @@ const setting = {
   slidesPerView: 4.5,
 
   breakpoints: {
+    1475: {
+      spaceBetween: 60,
+      slidesPerView: 4.5,
+    },
     1024: {
-      spaceBetween: 80,
+      spaceBetween: 60,
       slidesPerView: 4.5,
     },
     768: {
-      spaceBetween: 15,
+      spaceBetween: 50,
       slidesPerView: 3.5,
     },
-    390: {
-      spaceBetween: 10,
+    375: {
+      spaceBetween: 30,
       slidesPerView: 2.5,
     },
   },
