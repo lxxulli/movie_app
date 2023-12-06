@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Containal, Title, Con, MovieBg } from "./Css";
 
-export const PopMovie = ({ data, titlename }) => {
+export const ShowMovie = ({ data, titlename }) => {
   return (
     <Containal>
       <Title>{titlename}</Title>

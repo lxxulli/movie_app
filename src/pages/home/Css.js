@@ -3,7 +3,7 @@ import { IMG_URL } from "../../contents";
 import { mainColors, mainText } from "../style/GlobalStyled";
 
 export const Containal = styled.section`
-  padding: 50px 2% 0;
+  padding: 50px 0 0 2%;
 `;
 export const Title = styled.h3`
   font-size: 30px;
@@ -11,9 +11,12 @@ export const Title = styled.h3`
   margin-bottom: 20px;
 `;
 export const MovieBg = styled.div`
-  height: 350px;
+  height: 360px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
+  @media screen and (max-width: 1024px) {
+    height: 320px;
+  }
 `;
 
 export const ConWrap = styled.section`
@@ -25,6 +28,9 @@ export const MovieBigBg = styled.div`
   height: 420px;
   background: url(${IMG_URL}/w500/${(props) => props.$bgUrl}) no-repeat center /
     cover;
+  @media screen and (max-width: 1024px) {
+    height: 390px;
+  }
 `;
 export const Num = styled.h3`
   font-size: 200px;

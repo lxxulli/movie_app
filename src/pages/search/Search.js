@@ -6,6 +6,8 @@ import { movieSearch, popular } from "../../api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { PopMovie } from "./PopMovie";
+import { ShowMovie } from "./ShowMovie";
+import { SearchError } from "./SearchError";
 
 const Wrap = styled.div`
   display: flex;
@@ -39,7 +41,7 @@ export const Search = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     mode: "onSubmit",
   });
@@ -83,6 +85,8 @@ export const Search = () => {
           placeholder="찾으시는 영화를 입력해주세요."
         />
       </Form>
+      <SearchError text={errors?.search?.message} />
+      {term && <ShowMovie titlename="검색 결과" data={term} />}
       <PopMovie titlename="현재 인기 영화" data={popData} />
     </Wrap>
   );

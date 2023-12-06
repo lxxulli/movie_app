@@ -15,7 +15,7 @@ const setting = {
       spaceBetween: 15,
       slidesPerView: 3.5,
     },
-    320: {
+    390: {
       spaceBetween: 10,
       slidesPerView: 2.5,
     },
