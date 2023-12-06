@@ -5,23 +5,9 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "../../components/ErrorMessage";
 
 const Wrap = styled.div`
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-`;
-const TopLine = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  margin-bottom: 30px;
-  li {
-    width: 80px;
-    height: 1px;
-    background-color: white;
-    margin: 0 10px;
-  }
+  padding: 100px 0 50px;
 `;
 const Form = styled.form`
   max-width: 450px;
@@ -32,6 +18,21 @@ const Form = styled.form`
   align-items: center;
   text-align: center;
 `;
+const TopLine = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  li {
+    width: 80px;
+    height: 1px;
+    background-color: white;
+    margin: 0 10px;
+  }
+`;
+
 const Con = styled.div`
   margin-bottom: 15px;
   h4 {
@@ -60,7 +61,7 @@ const Input = styled.input`
   text-align: left;
 `;
 const Line = styled.div`
-  width: 270px;
+  width: 290px;
   height: 1px;
   background-color: white;
 `;

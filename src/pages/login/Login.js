@@ -54,9 +54,8 @@ const Icon = styled.div`
 `;
 const Input = styled.input`
   all: unset;
-  width: 100%;
+  width: 215px;
   height: 50px;
-  padding: 0 10px;
   text-align: left;
 `;
 const LoginButton = styled.button`
